@@ -1,0 +1,3 @@
+name: lambda-container
+runtime: nodejs
+description: A minimal AWS TypeScript Pulumi program
