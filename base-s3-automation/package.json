@@ -1,0 +1,17 @@
+{
+  "name": "base-s3-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/ts-node/dist/bin.js index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pulumi/aws": "^3.25.1",
+    "@pulumi/pulumi": "^2.18.2",
+    "@types/node": "^13.13.40",
+    "ts-node": "^7.0.1"
+  }
+}
