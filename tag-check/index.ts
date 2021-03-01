@@ -2,8 +2,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
-const vpc = awsx.ec2.Vpc.getDefault();
-
 const requiredMachines = 3;
 const name = "pk-instances";
 
@@ -68,5 +66,3 @@ for (let i = 1; i < requiredMachines + 1; i++) {
     }
   );
 }
-
-export const vpcid = vpc.id;
