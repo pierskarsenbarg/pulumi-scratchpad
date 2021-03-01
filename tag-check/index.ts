@@ -5,10 +5,14 @@ import * as awsx from "@pulumi/awsx";
 const requiredMachines = 3;
 const name = "pk-instances";
 
+// Change these four variables
+
 const zoneId = "";
 const subnetId = "";
 const amiId = "";
 const securityGroupId = "";
+
+// don't change anything below here
 
 let volumeType = "gp3";
 let volumeSize = 50;
