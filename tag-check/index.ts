@@ -36,23 +36,15 @@ for (let i = 1; i < requiredMachines + 1; i++) {
     rootBlockDevice: {
       encrypted: true,
       deleteOnTermination: true,
-      volumeSize: 40,
-    },
-    ebsBlockDevices: [
-      {
-        deviceName: "/dev/sda1",
-        deleteOnTermination: true,
-        encrypted: true,
-        volumeSize: volumeSize,
-        volumeType: volumeType,
-        tags: {
-          Name: `${name}-server-${i}-/dev/sda1`,
-          Environment: "DEV",
-          "pulumi:Project": pulumi.getProject(),
-          "pulumi:Stack": pulumi.getStack(),
-        },
+      volumeSize: volumeSize,
+      volumeType: volumeType,
+      tags: {
+        Name: `${name}-server-${i}-/dev/sda1`,
+        Environment: "DEV",
+        "pulumi:Project": pulumi. getProject(),
+        "pulumi:Stack": pulumi.getStack(),
       },
-    ],
+    },
   });
 
   const private_zone = aws.route53.getZone({zoneId: zoneId});
